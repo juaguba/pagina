@@ -10,6 +10,9 @@
     $mensajeCompleto = $mensaje . "\nAtentamente: " . $nombre
     
     if($nombre === '' || $email === '' || $celular === '' || $asunto === '' || $mensaje === ''){
+        echo json_encode('Llena todos los campos');
+    }else{
         mail($destinatario, $asunto, $mensajeCompleto, $header);
+        echo json_encode('Correcto');
     }
 ?>
