@@ -120,7 +120,11 @@ formulario.addEventListener('submit', (e) => {
             method: 'POST',
             body: datos
         })
-
+	    .then(res => res.json())
+	    .then(data => {
+		console.log(data)
+	})
+	
         document.getElementById('formulario-mensaje-exito').classList.add('formulario-mensaje-exito-activo')
         setTimeout(() => {
             document.getElementById('formulario-mensaje-exito').classList.remove('formulario-mensaje-exito-activo')
