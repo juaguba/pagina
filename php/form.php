@@ -9,7 +9,7 @@
     $header = "Enviado desde la pagina web";
     $mensajeCompleto = $mensaje . "\nAtentamente: " . $nombre
     
-    if($nombre == '' ){
+    if($nombre === '' || $email === '' || $celular === '' || $asunto === '' || $mensaje === ''){
         echo json_encode('Llena todos los campos');
     }else{
         echo json_encode('Correcto');
