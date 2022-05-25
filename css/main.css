@@ -1,0 +1,400 @@
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #000;
+    margin: 0;
+}
+/*BARRA NAVEGACION*/
+.header {
+    display: grid;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    transition: 0.7s;
+}
+
+header.abajo {
+    background: #fff;
+}
+
+header.abajo .logo,
+header.abajo ul li a {
+    color: #000;
+}
+
+header.abajo ul li:hover {
+    background: rgba(0, 0, 0, 90%);
+}
+header.abajo ul li a:hover{
+    color: #fff;
+}
+
+header.abajo .menu-icon {
+    color: #000;
+}
+
+header.abajo .btn {
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+}
+
+.header a {
+    color: white;
+    text-decoration: none;
+}
+
+.logo-nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    letter-spacing: 15px;
+    font-size: 1.4em;
+    display: flex;
+    align-items: center;
+}
+
+.menu-icon {
+    color: white;
+    display: none;
+    font-size: 30px;
+}
+
+.navigation ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.navigation ul li {
+    display: inline-block;
+    transition: all 0.4s linear;
+}
+
+.navigation ul li a {
+    display: block;
+    padding: 1.37rem 1.8rem;
+}
+
+.navigation ul li:hover {
+    background: rgba(0, 0, 0, 30%);
+}
+
+.container-logo {
+    padding-left: 8%;
+}
+
+.container-navigation {
+    padding-right: 8%;
+    padding-left: 8%;
+}
+/*FIN BARRA NAVEGACION*/
+
+/*PANEL*/
+.panel {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/portada.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.panel-portada {
+    margin: auto;
+}
+/*FIN PANEL*/
+
+/*SECCIONES*/
+.titulo-seccion {
+	text-align: center;
+	font-size: 2em;
+}
+.container{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+.wrapper {
+    max-width: 90%;
+    margin: 0 auto;
+}
+/*FIN SECCIONES*/
+
+/**********************CONTACTO********************/
+.seccion-contacto{
+    background-image: url(https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg);
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+.titulo-contacto{
+    color: #fff !important;
+}
+.contacto-wrapper {
+	max-width: 90%;
+    margin: 0 auto;
+	display: grid;
+	border-radius: 20px;
+	grid-template-columns: 2fr 1fr;
+    box-shadow: 2px 2px 20px 2px rgba(0, 0, 0, 0.2);
+}
+
+.contacto-form {
+    border-radius: 20px 0 0 20px;
+	padding: 2%;
+	background-color: white;
+}
+
+.contacto-form form {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.block {
+	grid-column: 1 / 3;
+}
+
+.btn-enviar{
+	text-align: center;
+}
+
+.formulario-grupo {
+	margin: 0;
+	padding: 1em;
+}
+.formulario-grupo-input{
+    padding: 0 !important;
+    overflow: hidden;
+    position: relative;
+}
+.formulario-input{
+    height: 45px;
+    line-height: 45px;
+}
+.input-error{
+    font-size: 12px;
+    margin-bottom: 0;
+    margin-top: 1px;
+    display: none;
+}
+.input-error-activo{
+    display: block;
+}
+
+.validacion-estado{
+    position: absolute;
+    right: 10px;
+    bottom: 15px;
+    z-index: 100;
+    font-size: 16px;
+    opacity: 0;
+}
+
+.formulario-mensaje-error{
+    grid-column: span 2;
+    height: 45px;
+    line-height: 45px;
+    background-color: #f66060;
+    margin: 0 15px;
+    margin-bottom: 10px;
+    padding: 0 15px;
+    border-radius: 3px;
+    display: none;
+}
+.formulario-mensaje-error-activo{
+    display: block;
+}
+.formulario-mensaje-error p{
+    padding: 0 ;
+    margin: 0;
+}
+.formulario-mensaje-exito{
+    font-size: 14px;
+    color: #119200;
+    display: none;
+}
+.formulario-mensaje-exito-activo{
+    display: block;
+}
+
+.formulario-label{
+    display: block;
+	font-weight: 500;
+	font-size: large;
+    cursor: pointer;
+}
+
+.contacto-form form button,
+.contacto-form form input,
+.contacto-form form textarea {
+    width: 100%;
+	border: none;
+	outline: none;
+	background: none;
+	border-bottom: 2px solid rgb(191, 62, 196);
+	resize: none;
+    transition: .3s ease all;
+}
+
+.contacto-form form button {
+	background: rgb(191, 62, 196);
+    color: #fff;
+	border: none;
+	text-transform: uppercase;
+	padding: 1em;
+    max-width: 80%;
+    cursor: pointer;
+}
+
+.contacto-form form button:hover,
+.contacto-form form button:focus {
+	background-color: rgb(228, 85, 60);
+}
+
+.contacto-info {
+    border-radius: 0 20px 20px 0;
+	padding: 5%;
+	background: linear-gradient(rgb(191, 62, 196),rgb(228, 85, 60));
+}
+
+.contacto-info h4,
+.contacto-info ul,
+.contacto-info p {
+	text-align: left;
+	margin: 0 0 1rem 0;
+	padding: 1em;
+    color: #fff;
+}
+.contacto-info ul li i{
+	margin-right: 5px;
+}
+
+.contacto-info ul {
+	list-style: none;
+}
+
+.contacto-info ul li {
+	padding: .3em;
+}
+/*VALIDACION ESTILOS*/
+.formulario-grupo-correcto .validacion-estado{
+    color: #1ed12d;
+    opacity: 1;
+}
+.formulario-grupo-incorrecto .formulario-label{
+    color: #bb2929;
+}
+.formulario-grupo-incorrecto .validacion-estado{
+    color: #bb2929;
+    opacity: 1;
+}
+.formulario-grupo-incorrecto .formulario-input{
+    border-bottom: 2px solid #bb2929;
+}
+
+/****************************** FIN CONTACTO *************************/
+
+
+/* FOOTER */
+.footer {
+    background: #333;
+    padding: 2rem 0;
+    text-align: center;
+    color: white;
+    margin-top: 4em;
+}
+/* FIN FOOTER */
+
+@media only screen and (max-width: 780px) {
+
+    .container-navigation {
+        padding-right: 0;
+        padding-left: 0;
+    }
+    header.abajo .btn {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
+
+    header.abajo .container-logo {
+        margin: 0rem 0;
+        transition: 0.7s;
+    }
+
+    .menu-icon {
+        display: flex;
+        cursor: pointer;
+        margin: 0;
+        padding-right: 8%;
+    }
+
+    .container-logo {
+        display: flex;
+        justify-content: space-between;
+        margin: 1rem 0;
+    }
+
+    .logo-nav-container {
+        display: block;
+    }
+
+    .navigation {
+        width: 100%;
+    }
+
+    .navigation ul {
+        display: none;
+    }
+
+    .navigation .show {
+        display: block;
+    }
+
+    .navigation ul li {
+        display: block;
+        text-align: center;
+    }
+
+    .navigation ul li a {
+        display: block;
+        padding: 0.5rem 0;
+    }
+
+    .navigation .first {
+        border-top-style: solid;
+    }
+    /* CONTACTO */
+    .contacto-wrapper {
+		grid-template-columns: none;
+	}
+    .contacto-form{
+        padding: 1.5em 1em;
+		border-radius: 20px 20px 0 0;
+    }
+    .contacto-info{
+		border-radius: 0 0 20px 20px;
+	}
+
+	.contacto-info h4,
+	.contacto-info ul,
+	.contacto-info p {
+		text-align: center;
+		padding: 0;
+	}
+    /* FIN CONTACTO */
+
+}
+@media only screen and (max-width: 575px) {
+    .contacto-form form{
+        display: block;
+    }
+    .contacto-form p {
+        padding: .5em;
+    }
+}
